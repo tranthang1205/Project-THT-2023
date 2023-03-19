@@ -5,8 +5,269 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Fredoka+One&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background: url(/IMG/background_login.png);
+        }
+
+        .Main{
+            position: absolute;
+            top: calc(50% - 610px/2);
+            left: calc(50% - 1160px/2);
+            width: 1160px;
+            height: 610px;
+            background: rgba(248, 248, 248, 0.78);
+            border-radius: 35px;
+            display: flex;
+            align-items: center;
+        }
+        /**/
+        .LOGIN{
+            box-sizing: border-box;
+            width: 797px;
+            height: 610px;
+            padding: 38px 0px 0px 96px;
+            border-radius: 35px 0px 0px 35px;
+        }
+
+        .Header{
+            width: 624px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .Header1{
+            width: 476px;
+            font-family: 'Fredoka One';
+            font-weight: 400;
+            font-size: 64px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .H1{color: rgba(0, 0, 0, 0.76);}
+        .H2{color: rgba(251, 147, 0, 0.85);}
+        .Header2{
+            margin-top: -1px;
+            margin-bottom: 55px;
+            font-family: 'Comfortaa';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 23px;
+            letter-spacing: 0.05em;
+            color: rgba(0, 0, 0, 0.54);
+        }
+
+        .login{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 45px;
+        }
+        .Label{
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 18px;
+            letter-spacing: 0.2em;
+            color: rgba(0, 0, 0, 0.68);
+        }
+        .input{
+            box-sizing: border-box;
+
+            margin-top: 12px;
+            width: 624px;
+            height: 50px;
+            font-size: 20px;
+            padding: 0 16px;
+            background: rgba(217, 217, 217, 0.68);
+            border-radius: 10px;
+
+            border: none;
+        }
+        .fogot{
+            margin-top: -33px;
+            width: 191px;            
+        }
+        .fogot a{
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            letter-spacing: 0.02em;
+            color: #FD9707;
+            text-decoration: none;
+        }
+        .fogot a:hover{color: #dc8305;}
+
+        .login-btn{
+            box-sizing: border-box;
+            margin-top: 23px;
+            width: 624px;
+            height: 58px;
+            padding: 14px 0;
+
+            background: rgba(251, 147, 0, 0.85);
+            border-radius: 15px;
+
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 29px;
+            letter-spacing: 0.1em;
+            color: #FFFFFF;
+            text-align: center;
+
+            cursor: pointer;
+            border: none;
+        }
+        .login-btn:hover{
+            background-color:rgba(238, 139, 0, 0.85)
+        }
+        .login-btn:active{
+            font-size: 20px;
+            background-color: rgba(251, 146, 0, 0.601);
+        }
+
+        .Register{
+            margin-top: 10px;
+            display: flex;
+        }
+        .Register1{
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 17px;
+            letter-spacing: 0.1em;
+            color: #6D6E6E;
+        }
+        .Register2{
+            margin-left: 1rem;
+        }
+        .Register2 a{
+            text-decoration: none;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 19px;
+            letter-spacing: 0.1em;
+            color: #FD9707;
+        }
+        .Register2 a:hover{color: #dc8305;}
+
+
+        /**/
+
+        .Divide{
+            width: 10px;
+            height: 573px;
+
+            background: rgba(217, 217, 217, 0.63);
+            border-radius: 240px;
+        }
+
+        /**/
+        .Logo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 353px;
+            height: 610px;
+            border-radius: 0 35px 35px 0;
+        }
+        .LG{
+            margin-top: 5rem;
+            width: 204px;
+            height: 204px;
+        }
+        .Logo h1{
+            font-family: 'Fredoka One', cursive;
+            font-weight: 400;
+            font-size: 32px;
+            letter-spacing: 0.12em;
+            color: rgba(251, 147, 0, 0.85);
+        }
+        /* CONTACT */
+        .Contact{
+            margin-top: 4rem;
+            width: 318px;
+            height: 47px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .path{
+            object-fit: cover;
+            width: 47px;
+            height: 47px;
+        }
+        .path img{
+            width: 100%;
+            height: 100%;
+        }
+        .box{
+            width: 30px;
+            height: 15px;
+            border-radius: 30px;
+            background: rgba(251, 147, 0, 0.85);
+        }
+        .circle{
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+    </style>
 </head>
 <body>
-    abc
+    <div class="Main">
+        <div class="LOGIN">
+            <div class="Header">
+                <div class="Header1">
+                    <div class="H1">Welcome</div>
+                    <div class="H2">Chef!!</div>
+                </div>
+                <div class="Header2">We are excited to see you again!!</div>
+            </div>
+
+            <div class="login">
+                    <label class="Label" for="email">EMAIL OR PHONE NUMBER</label>
+                    <input class="input" type="text" placeholder="">
+            </div>
+            <div class="login">
+                    <label class="Label" for="password">PASSWORD</label>
+                    <input class="input" type="text" placeholder="">
+            </div>
+            <div class="fogot"><a href="">Forgot your password?</a></div>
+
+            <button class="login-btn">Login</button>
+            <div class="Register">
+                <div class="Register1">Need an account?</div>
+                <div class="Register2"><a href="">Register</a></div>
+            </div>
+        </div>
+
+        <div class="Divide"></div>
+
+        <div class="Logo">
+            <img src="/IMG/logo.png" class="LG">
+            <h1>Le Cuisinier</h1>
+            <div class="Contact">
+                <div class="box"></div>
+                <a href=""><div class="path"><img src="/IMG/facebook.png" name="Facebook"></div></a>
+                <div class="circle"></div>
+                <a href=""><div class="path"><img src="/IMG/twitter.png" name="Twitter"></div></a>
+                <div class="circle"></div>
+                <a href=""><div class="path"><img src="/IMG/discord.png" name="Discord"></div></a>
+                <div class="box"></div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
