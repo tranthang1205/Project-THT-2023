@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/found_recipes.css')}}">
+    <!-- LINK FONT -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/fonts.css')}}">
+</head>
+<body>
+    <header>
+            <img class = "nav-logo" src="{{ url_for('static', filename='IMG/logo.png') }}" alt="logo">
+            <div class="big-box">
+                <div class="box-btn">
+                    <a href="" class="btn_nav TIPS">
+                        <p> TIPS </p>
+                    </a>
+                    <a href="" class="btn_nav Bookmarks">
+                        <p> Bookmarks </p>
+                    </a>
+                    <a href="" class="btn_nav Find_by_ingredients">
+                        <p> Find by ingredients</p>
+                    </a>
+                </div>
+
+                <form action="" class="big-box2">
+                    <input class="box-search" type="search" placeholder="Enter name">
+                    <input type="image" src ="{{ url_for('static', filename='IMG/search-icon.png') }}" class="sub-nav-btn">
+                </form>
+            </div>
+    </header>
+
+    <div class="header-about">
+        <div class = "header-about-title"> LE CUISINIER </div>
+        <div class = "divide"></div>
+        <div class = "header-about-content"> New, powerful Recipe-Generator utilizing State-of-The-Art Object-Detector Yolov5. </div>
+    </div>
+
+    
+</body>
+</html>
