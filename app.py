@@ -20,9 +20,9 @@ def login():
     
     return render_template('login.html')
 
-@app.route('/found_recipes')
+@app.route('/landing')
 def main():
-    return render_template('found_recipes.html')
+    return render_template('landing.html')
 
 @app.route('/logout')
 def logout():

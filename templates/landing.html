@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/landing.css') }}">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Dosis:wght@200;300;400;500;600;700;800&family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- NAVABAR -->
+    <div class = "nav">
+        <img src="{{ url_for('static', filename='IMG/logo.png') }}" alt="">
+    </div>
+    <!-- Landing 1 --> <!-- welcome to -->
+    <div class = "landing-1">
+        <div-1>
+            <div class = "landing-1-font-1">Welcome to</div>
+            <div class = "landing-1-font-2">Le-Cuisinier</div>
+        </div-1>
+        <div-2>
+            <div class = "landing-1-font-1">...New, powerful</div>
+            <div class = "landing-1-font-2">Recipe-Generator</div>
+            <div class = "landing-1-font-1">utilizing</div>
+            <div class = "landing-1-font-2">State-of-The-Art</div>
+            <div class = "landing-1-font-1">Object-Detector</div>
+            <div class = "landing-1-font-2 Yolov5">Yolov5</div>
+        </div-2>
+        <div-3>
+            <form action="">
+                <button>
+                    <div class = "landing-1-font-1">Go discover our website</div>
+                    <div class = "landing-1-font-2">right now</div>
+                    <img src="{{ url_for('static', filename='IMG/Vector-landing-1.png')}}" alt="">
+                </button>
+            </form>
+        </div-3>
+    </div>
+
+    <!-- Divide 1-2 -->
+    <div class = "divide-1-2">
+        <div></div>
+    </div>
+
+    <!-- Landing 2 -->
+    <div class = "landing-2" data-aos="fade-up" data-aos-duration="1000">
+        <div-1 data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="centre-center">
+            What is Le-Cuisinier...
+        </div-1>
+        <div-2 data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="centre-center">
+            Le-Cuisinier is a Recipe-generator featuring an Object-Detector based on Yolov5. The project was all done by a group of students from Vinh University - Viet Nam 
+        </div-2>
+        <div-3 data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="centre-center">
+            ...and why using it?
+        </div-3>
+    </div>
+
+    <!-- Landing 3 -->
+    <div class = "landing-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="centre-center">
+        <div-1 data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="centre-center">
+            Convenience
+        </div-1>
+        <div-2 data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="centre-center">
+            Le-Cuisinier grants you various tools that help your kitchen life much easier
+        </div-2>
+    </div>
+
+    <!-- Landing 4 -->
+    <div class = "landing-4" data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="centre-center">
+        <p data-aos="fade-up" data-aos-duration="2000" data-aos-anchor-placement="centre-center">The website was purposefully designed to be <span class = "landing-4-font-1">beautiful</span>, <span class = "landing-4-font-2">functional</span> and <span class = "landing-4-font-3">easy on eyes</span> at the same time</p>
+    </div>
+
+    <!-- Landing 5 -->
+    <div class ="landing-5" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="centre-center">
+        <p data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="centre-center">
+            We hast large database which covers a noteable range of food
+        </p>
+    </div>
+
+    <!-- Landing 6 -->
+    <div class = "landing-6" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="centre-center">
+        <img class="landing-6-1" src="{{ url_for('static', filename='IMG/landing-6-1.png')}}" alt="" data-aos="fade-left" data-aos-duration="1000" data-aos-anchor-placement="centre-center">
+        <img class="landing-6-2" src="{{ url_for('static', filename='IMG/landing-6-2.png')}}" alt="" data-aos="fade-left" data-aos-duration="1000" data-aos-anchor-placement="centre-center">
+        <img class="landing-6-3" src="{{ url_for('static', filename='IMG/landing-6-3.png')}}" alt="" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="centre-center">
+        <p class="landing-6-4">Our images were intentionally chose to be fashionable, groovy, jazzy</p>
+    </div>
+
+    <!-- Landing 7 -->
+    <div class = "landing-7" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="centre-center">
+        <div-1 data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="centre-center">
+            DEEP-LEARNING POWERED OBJECT DETECTION
+        </div-1>
+        <div-2 data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="centre-center">
+            Le-Cuisinier hath a very handy feature: it can tell you which ingredients are in a picture. This is accomplished through the use of YOLO - a deep learning algorithm
+        </div-2>
+    </div>
+
+    <!-- Landing 8 -->
+    <div class="landing-8" data-aos="fade-up" data-aos-duration="2500" data-aos-anchor-placement="centre-center">
+        <div-1>MADE BY:</div-1>
+        <div-2>
+            <div-3>
+                <div class = "landing-8-avt avt1"></div>
+                <div-4>Valleny</div-4>
+                <div-5>Designer</div-5>
+            </div-3>
+            <div-3>
+                <div class = "landing-8-avt avt2"></div>
+                <div-4>Oreo</div-4>
+                <div-5>Font-end</div-5>
+            </div-3>
+            <div-3>
+                <div class = "landing-8-avt avt3"></div>
+                <div-4>Maru</div-4>
+                <div-5>Back-end</div-5>
+            </div-3>
+        </div-2>
+    </div>
+
+    <!-- Landing 9 -->
+    <div class = "landing-9" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="centre-center">
+    </div>
+
+    <!-- Landing 10 -->
+    <div class = "landing-10" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="centre-center">
+    </div>
+</body>
+</html>
