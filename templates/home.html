@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Le Cusiner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/home.css') }}">
+</head>
+
+<body>
+    <!----------------------HEADER----------------->
+    <header>
+        <div class="box">
+            <div class="box-logo">
+                <img src="{{ url_for('static', filename='IMG-HOME/logo-fix.png') }}" alt="logo">
+            </div>
+            <div class="box-page">
+                <div class="page-home">
+                    <a href="">Home</a>
+                </div>
+                <div class="page-search">
+                    <a href="">Search</a>
+                </div>
+                <div class="page-tip">
+                    <a href="">Tips</a>
+                </div>
+                <div class="page-login">
+                    <a href="">Login</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-------------BODY--------------->
+    <div class="big-space"></div>
+    <div class="line"></div>
+    <div class="space"></div>
+    <section>
+        <div class="box-find">
+            <div class="find-text">
+                <p>Find a Recipe</p>
+            </div>
+            <div class="search">
+                <input class="box-search" placeholder="Enter name" type="text" name="search" id="">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M27.6667 30L17.1667 19.5C16.3333 20.1667 15.375 20.6944 14.2917 21.0833C13.2083 21.4722 12.0556 21.6667 10.8333 21.6667C7.80556 21.6667 5.24333 20.6178 3.14667 18.52C1.05 16.4222 0.00111111 13.86 0 10.8333C0 7.80556 1.04889 5.24333 3.14667 3.14667C5.24444 1.05 7.80667 0.00111111 10.8333 0C13.8611 0 16.4233 1.04889 18.52 3.14667C20.6167 5.24444 21.6656 7.80667 21.6667 10.8333C21.6667 12.0556 21.4722 13.2083 21.0833 14.2917C20.6944 15.375 20.1667 16.3333 19.5 17.1667L30 27.6667L27.6667 30ZM10.8333 18.3333C12.9167 18.3333 14.6878 17.6039 16.1467 16.145C17.6056 14.6861 18.3344 12.9156 18.3333 10.8333C18.3333 8.75 17.6039 6.97889 16.145 5.52C14.6861 4.06111 12.9156 3.33222 10.8333 3.33333C8.75 3.33333 6.97889 4.06278 5.52 5.52167C4.06111 6.98056 3.33222 8.75111 3.33333 10.8333C3.33333 12.9167 4.06278 14.6878 5.52167 16.1467C6.98056 17.6056 8.75111 18.3344 10.8333 18.3333Z"
+                        fill="white" fill-opacity="0.7" />
+                </svg>
+            </div>
+            <div class="find-info">
+                <a href="">Or try using our Recipe-Generator</a>
+            </div>
+        </div>
+    </section>
+    <div class="space-2"></div>
+    <!------------ADVERTISEMENT-------------------------->
+    <box-ad>
+        <a href="">
+            <div class="agd">
+                <p>Ad</p>
+            </div>
+        </a>
+    </box-ad>
+    <div class="space-2"></div>
+    <!--------------SECTION 2--------------------------->
+    <div class="big-box">
+        <section-2>
+            <div class="box-img">
+                <img src="section" alt="img">
+            </div>
+            <div class="box-text">
+                <div class="box-special">
+                    <p>Special today</p>
+                </div>
+                <div>
+                    <div class="head-tile">
+                        <p>Beef Wellington</p>
+                    </div>
+                    <div class="mid-tile">
+                        <p>Luxury fillet steak coated with
+                            pâté de foie gras and duxelles,
+                            wrapped in fantastic puff pastry.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="time">
+                        <p>
+                            Time: 2hr 30 mins
+                        </p>
+                        <p>
+                            Calo: 744
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section-2>
+        <div class="big-box-line">
+            <div class="box-line"> </div>
+        </div>
+        <!------------------SECTION 3---------------------->
+        <div class="section-3">
+            <div class="head-tile">
+                <p>DINNERS TO END A WONDERFUL DAY</p>
+            </div>
+            <div class="img-list">
+                <div class="img-item">
+                    <div class="box-img">
+                        <img src="/THT/Food web/IMG-HOME/section-3-food1.jpeg" alt="food">
+                    </div>
+                    <div class="box-text">
+                        <div class="head-tile">
+                            <p>Italian Sausage Pasta Skillet</p>
+                        </div>
+                        <div class="mid-tile">
+                            <p>Time: 1hr</p>
+                            <p>Calo: 200</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-item">
+                    <div class="box-img">
+                        <img src="/THT/Food web/IMG-HOME/section-3-food2.jpeg" alt="food">
+                    </div>
+                    <div class="box-text">
+                        <div class="head-tile">
+                            <p>Cajun Cabbage Skillet</p>
+                        </div>
+                        <div class="mid-tile">
+                            <p>Time: 1hr</p>
+                            <p>Calo: 200</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-item">
+                    <div class="box-img">
+                        <img src="/THT/Food web/IMG-HOME/section-3-food3.jpeg" alt="food">
+                    </div>
+                    <div class="box-text">
+                        <div class="head-tile">
+                            <p>Sweet and Tangy Chicken Burgers</p>
+                        </div>
+                        <div class="mid-tile">
+                            <p>Time: 1hr</p>
+                            <p>Calo: 200</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-item">
+                    <div class="box-img">
+                        <img src="/THT/Food web/IMG-HOME/section-3-food4.jpeg" alt="food">
+                    </div>
+                    <div class="box-text">
+                        <div class="head-tile">
+                            <p>Chicken Katsu with Ginger Rice</p>
+                        </div>
+                        <div class="mid-tile">
+                            <p>Time: 1hr</p>
+                            <p>Calo: 200</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="big-box-line2">
+                <div class="box-line2"> </div>
+            </div>
+        </div>
+        <!-----------------SECTION 4------------------>
+        <div class="section-4">
+            <div class="head-tile">
+                <p>FOR SWEET LOVERS</p>
+            </div>
+            <div class="box-info">
+                <div class="mini-box">
+                    <div class="box-img">
+                        <div class="img">
+                            <img src="/THT/Food web/IMG-HOME/section4-food.png" alt="food">
+                        </div>
+                        <div class="text">
+                            <div class="head-tile">
+                                <p>Lady Baltimore Cake</p>
+                            </div>
+                            <div class="mid-text">
+                                <p>The wonderfully tasty white layer cake with
+                                    fluffy frosting and a fruit-and-nut filling.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-product">
+                    <div class="img-item">
+                        <div class="box-img">
+                            <img src="/THT/Food web/IMG-HOME/section-4-product-1.jpeg" alt="food">
+                        </div>
+                        <div class="box-text">
+                            <div class="head-tile">
+                                <p>German Chocolate Cake</p>
+                            </div>
+                            <div class="mid-tile">
+                                <p>Time: 1hr</p>
+                                <p>Calo: 200</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-item">
+                        <div class="box-img">
+                            <img src="/THT/Food web/IMG-HOME/section-4-product-2.jpeg" alt="food">
+                        </div>
+                        <div class="box-text">
+                            <div class="head-tile">
+                                <p>Strawberry Macarons</p>
+                            </div>
+                            <div class="mid-tile">
+                                <p>Time: 1hr</p>
+                                <p>Calo: 200</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-item">
+                        <div class="box-img">
+                            <img src="/THT/Food web/IMG-HOME/section-4-product-1.jpeg" alt="food">
+                        </div>
+                        <div class="box-text">
+                            <div class="head-tile">
+                                <p>German Chocolate Cake</p>
+                            </div>
+                            <div class="mid-tile">
+                                <p>Time: 1hr</p>
+                                <p>Calo: 200</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------------------------>
+        <div class="big-box-line">
+            <div class="box-line"> </div>
+        </div>
+        <!------------------------------SECTION 5------------------------------>
+        <div class="section-5">
+            <div class="head-tile">
+                <p>FOR FELLOW VEGETARIAN</p>
+            </div>
+            <div class="box-info">
+                <div class="box-item">
+                    <div class="box-img">
+                        <img src="/THT/Food web/IMG-HOME/section-5-food1.jpg" alt="food">
+                    </div>
+                    <div class="head-tile">
+                        <p>Roasted Zucchini Flatbread</p>
+                    </div>
+                    <div class="box-text">
+                        <p>This pizza-like meatless meal comes together easily using store-bought
+                            pita and hummus, plus oven-roasted zucchini, lemon and goat cheese.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="box-item">
+                    <div class="box-img">
+                        <img src="/THT/Food web/IMG-HOME/section-5-food2.png" alt="food">
+                    </div>
+                    <div class="head-tile">
+                        <p>Stuffed Honeynut Squash</p>
+                    </div>
+                    <div class="box-text">
+                        <p>This pizza-like meatless meal comes together easily using store-bought
+                            pita and hummus, plus oven-roasted zucchini, lemon and goat cheese.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------->
+        <div class="big-box-line3">
+            <div class="box-line3"> </div>
+        </div>
+    </div>
+    <!---------------SECTION 6------------------------>
+    <div class="section-6">
+        <div class="head-tile">
+            <p>MADE BY:</p>
+        </div>
+        <div class="member">
+            <div class="item">
+                <div class="box-avt">
+                    <img src="/THT/Food web/IMG-HOME/CLONE.jpeg" alt="avt">
+                </div>
+                <div class="info">
+                    <p>Valleny</p>
+                </div>
+                <div class="inf-mini">
+                    <p>Designer</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="box-avt">
+                    <img src="/THT/Food web/IMG-HOME/CLONE.jpeg" alt="avt">
+                </div>
+                <div class="info">
+                    <p>Orias</p>
+                </div>
+                <div class="inf-mini">
+                    <p>Front-end</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="box-avt">
+                    <img src="/THT/Food web/IMG-HOME/CLONE.jpeg" alt="avt">
+                </div>
+                <div class="info">
+                    <p>Maru</p>
+                </div>
+                <div class="inf-mini">
+                    <p>Back-end</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------Footer----------------->
+    <footer>
+        <img src="/THT/Food web/IMG-HOME/thankyou.png" alt="footer">
+    </footer>
+</body>
+</html>
