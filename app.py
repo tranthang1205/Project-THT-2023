@@ -20,13 +20,16 @@ def login():
     
     return render_template('login.html')
 
-@app.route('/landing')
+@app.route('/landing', methods=['GET', 'POST'])
 def landing():
+    if request.method == 'POST':
+        return render_template('home.html')
     return render_template('landing.html')
 
 @app.route('/home')
 def home():
     return render_template('home.html')
+
 @app.route('/logout')
 def logout():
     if 'username' in session:
