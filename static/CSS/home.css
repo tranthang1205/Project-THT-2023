@@ -684,7 +684,24 @@ section-2 .box-text .box-special {
 
   color: #000000;
 }
+/*----------ANIMATION---------------*/
+.img-item .box-img
+{
+  overflow: hidden;
+}
+.img-item .box-img img 
+{
+  max-width: 100%;
+  transition: all 0.5s;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+}
+.img-item .box-img:hover img
+{
 
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
 /*-------FOOTER----*/
 footer {
   height: 100px;
