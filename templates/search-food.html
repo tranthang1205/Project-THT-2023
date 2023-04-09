@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search - Le Cusiner</title>
-    <link rel="stylesheet" href="search-food.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/search-food.css')}}">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
     <header>
         <div class="box">
             <div class="box-logo">
-                <img src="/THT/Food web/IMG-SEARCH/logo.png" alt="logo">
+                <img src=" {{ url_for('static', filename='IMG//IMG-SEARCH/logo.png') }}" alt="logo">
             </div>
             <div class="box-page">
                 <div class="page-home">
@@ -33,40 +33,154 @@
         </div>
     </header>
     <!-------------BODY--------------->
-    <div class="big-space"></div>
-    <div class="line"></div>
-    <div class="space"></div>
+
     <section>
         <form action="">
-            <label for="search">
+            <label for="">
                 <input class="search" type="text" placeholder="Enter name">
                 <input class="btn-search" type="submit" value="Search">
             </label>
-        </form>
-        <form action="">
             <input type="submit" value="Recipe-Generator" class="recipe">
         </form>
     </section>
-    <div class="space2"></div>
-    <div class="line2"></div>
-    <div class="space3"></div>
+
+    <div class="divide"></div>
     <!---------------------SECION -MAIN------------------------------------>
     <div class="section-2">
+    
         <form class="left">
-            <form class="meal-type">
-                <div class="head-tile">
-                    <p>Meal type:</p>
-                </div>
-                <label class="ex">
-                    <input type="radio">
+            <!-- -----Meal type----- -->
+            <div class="left-type">
+                <p>Meal type: </p>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>Dessert</p>
+                    </span>
                 </label>
-            </form>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>Main Dish</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>Side Dish</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>Beverage</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>Appetizer</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>Breakfast</p>
+                    </span>
+                </label>
+            </div>
+            <!-- -----Calories----- -->
+            <div class="left-type">
+                <p>Calories: </p>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>< 200</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>200 - 400</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>400 - 600</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>> 600</p>
+                    </span>
+            </div>
+            <!-- -----Time------ -->
+            <div class="left-type">
+                <p>Time: </p>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>0 - 15m</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>15 - 30m</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>30 - 45m</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>45 - 60m</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>1h - 1h30</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>> 1h30</p>
+                    </span>
+                </label>
+            </div>
+            <!-- -----Apply filter----- -->
+            <label class="apply">
+                <input type="submit" value="Apply filter">
+            </label>
         </form>
+
         <div class="right">
             <form class="top">
-                <form class="head-tile">
                     <p>144 results for “Ma”</p>
-                </form>
             </form>
             <form class="bottom">
 
