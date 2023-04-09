@@ -7,16 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search - Le Cusiner</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='CSS/search-food.css')}}">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Dosis:wght@200;300;400;500;600;700;800&family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!----------------------HEADER----------------->
     <header>
-        <div class="box">
-            <div class="box-logo">
+        <form class="box">
+            <label class="box-logo">
                 <img src=" {{ url_for('static', filename='IMG//IMG-SEARCH/logo.png') }}" alt="logo">
-            </div>
-            <div class="box-page">
+            </label>
+            <label class="box-page">
                 <div class="page-home">
                     <a href="">Home</a>
                 </div>
@@ -29,8 +33,8 @@
                 <div class="page-login">
                     <a href="">Login</a>
                 </div>
-            </div>
-        </div>
+            </label>
+        </form>
     </header>
     <!-------------BODY--------------->
 
@@ -47,7 +51,7 @@
     <div class="divide"></div>
     <!---------------------SECION -MAIN------------------------------------>
     <div class="section-2">
-    
+        <!-- left -->
         <form class="left">
             <!-- -----Meal type----- -->
             <div class="left-type">
@@ -177,13 +181,23 @@
                 <input type="submit" value="Apply filter">
             </label>
         </form>
-
+        <!-- right -->
         <div class="right">
-            <form class="top">
+            <div class="top">
                     <p>144 results for “Ma”</p>
-            </form>
+            </div>
             <form class="bottom">
-
+                <div class="element">
+                    <!-- img -->
+                    <div-1></div-1>
+                    <div-2>8 ingredients</div-2>
+                    <div-3>Stuffed Honeynut Squash</div-3>
+                    <div-4>
+                        <div-5>Appetizer</div-5>
+                        <div-5>1h 30 mins</div-5>
+                        <div-5>420 calo</div-5>
+                    </div-4>
+                </div>
             </form>
         </div>
     </div>

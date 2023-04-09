@@ -450,10 +450,62 @@ section .recipe {
   color: #292929;
 }
 
+/* main-page */
 .section-2 .right .bottom {
   width: 800px;
-  height: 1295px;
+  height: fit-content;
   background: #FFFFFF;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+}
+/* Element */
+.element{
+  width: 240px;
+  height: 270px;
+  border-radius: 10px;
+  background: #F8F9FA;
+  box-sizing: border-box;
+
+}
+.element div-1{
+  width: 240px;
+  height: 150px;
+  border-radius: 10px;
+
+  background-image: url(/static/IMG/IMG-SEARCH/element1.png);
+  object-fit: cover;
+}
+.element div-2{
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;  
+  color: rgba(2, 118, 171, 0.8);
+}
+.element div-3{
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+  color: #191919;
+}
+.element div-4{
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 16px;
+  row-gap: 6px;
+}
+.element div-5{
+  width: fit-content;
+  height: fit-content;
+  padding: 5px 6px;
+  background: #0276AB;
+  border-radius: 10px;
+
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #FFFFFF;
 }
