@@ -444,7 +444,10 @@ body{
 .landing-10{
     width: 100%;
     height: 100px;
-
-    background-image: url(/static/IMG/landing-10.png);
-    object-fit: cover;
+    background-color: #B8F6CA;
+}
+.landing-10{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
