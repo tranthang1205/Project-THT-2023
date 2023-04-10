@@ -6,17 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search - Le Cusiner</title>
-    <link rel="stylesheet" href="search-food.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/search-food.css')}}">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Dosis:wght@200;300;400;500;600;700;800&family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!----------------------HEADER----------------->
     <header>
-        <div class="box">
-            <div class="box-logo">
-                <img src="/THT/Food web/IMG-SEARCH/logo.png" alt="logo">
-            </div>
-            <div class="box-page">
+        <form class="box">
+            <label class="box-logo">
+                <img src=" {{ url_for('static', filename='IMG//IMG-SEARCH/logo.png') }}" alt="logo">
+            </label>
+            <label class="box-page">
                 <div class="page-home">
                     <a href="">Home</a>
                 </div>
@@ -29,48 +33,463 @@
                 <div class="page-login">
                     <a href="">Login</a>
                 </div>
-            </div>
-        </div>
+            </label>
+        </form>
     </header>
     <!-------------BODY--------------->
-    <div class="big-space"></div>
-    <div class="line"></div>
-    <div class="space"></div>
+
     <section>
         <form action="">
-            <label for="search">
+            <label for="">
                 <input class="search" type="text" placeholder="Enter name">
                 <input class="btn-search" type="submit" value="Search">
             </label>
-        </form>
-        <form action="">
             <input type="submit" value="Recipe-Generator" class="recipe">
         </form>
     </section>
-    <div class="space2"></div>
-    <div class="line2"></div>
-    <div class="space3"></div>
+
+    <div class="divide"></div>
     <!---------------------SECION -MAIN------------------------------------>
     <div class="section-2">
+        <!-- left -->
         <form class="left">
-            <form class="meal-type">
-                <div class="head-tile">
-                    <p>Meal type:</p>
-                </div>
-                <label class="ex">
-                    <input type="radio">
+            <!-- -----Meal type----- -->
+            <div class="left-type">
+                <p>Meal type: </p>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>Dessert</p>
+                    </span>
                 </label>
-            </form>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>Main Dish</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>Side Dish</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>Beverage</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>Appetizer</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>Breakfast</p>
+                    </span>
+                </label>
+            </div>
+            <!-- -----Calories----- -->
+            <div class="left-type">
+                <p>Calories: </p>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>< 200</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>200 - 400</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>400 - 600</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>> 600</p>
+                    </span>
+            </div>
+            <!-- -----Time------ -->
+            <div class="left-type">
+                <p>Time: </p>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>0 - 15m</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>15 - 30m</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>30 - 45m</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>45 - 60m</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>1h - 1h30</p>
+                    </span>
+                </label>
+                <label class="left-type-box">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkmark">
+                        <div></div>
+                        <p>> 1h30</p>
+                    </span>
+                </label>
+            </div>
+            <!-- -----Apply filter----- -->
+            <label class="apply">
+                <input type="submit" value="Apply filter">
+            </label>
         </form>
+        <!-- right -->
         <div class="right">
-            <form class="top">
-                <form class="head-tile">
+            <div class="top">
                     <p>144 results for “Ma”</p>
-                </form>
-            </form>
-            <form class="bottom">
+            </div>
+            <div class="bottom">
+                <a class="element" href="">
+                    <!-- img -->
+                    <div-1></div-1>
+                    <!-- -->
+                    <div>
+                        <div-2>8 ingredients</div-2>
+                        <div-3>Stuffed Honeynut Squash</div-3>
+                        <div-4>
+                            <div-5>Appetizer</div-5>
+                            <div-5>1h 30 mins</div-5>
+                            <div-5>420 calo</div-5>
+                        </div-4>
+                    </div>
+                </a>
 
-            </form>
+                <a class="element" href="">
+                    <!-- img -->
+                    <div-1></div-1>
+                    <!-- -->
+                    <div>
+                        <div-2>8 ingredients</div-2>
+                        <div-3>Stuffed Honeynut Squash</div-3>
+                        <div-4>
+                            <div-5>Appetizer</div-5>
+                            <div-5>1h 30 mins</div-5>
+                            <div-5>420 calo</div-5>
+                        </div-4>
+                    </div>
+                </a>
+
+                <a class="element" href="">
+                    <!-- img -->
+                    <div-1></div-1>
+                    <!-- -->
+                    <div>
+                        <div-2>8 ingredients</div-2>
+                        <div-3>Stuffed Honeynut Squash</div-3>
+                        <div-4>
+                            <div-5>Appetizer</div-5>
+                            <div-5>1h 30 mins</div-5>
+                            <div-5>420 calo</div-5>
+                        </div-4>
+                    </div>
+                </a>
+
+                <a class="element" href="">
+                    <!-- img -->
+                    <div-1></div-1>
+                    <!-- -->
+                    <div>
+                        <div-2>8 ingredients</div-2>
+                        <div-3>Stuffed Honeynut Squash</div-3>
+                        <div-4>
+                            <div-5>Appetizer</div-5>
+                            <div-5>1h 30 mins</div-5>
+                            <div-5>420 calo</div-5>
+                        </div-4>
+                    </div>
+                </a>
+
+                <a class="element" href="">
+                    <!-- img -->
+                    <div-1></div-1>
+                    <!-- -->
+                    <div>
+                        <div-2>8 ingredients</div-2>
+                        <div-3>Stuffed Honeynut Squash</div-3>
+                        <div-4>
+                            <div-5>Appetizer</div-5>
+                            <div-5>1h 30 mins</div-5>
+                            <div-5>420 calo</div-5>
+                        </div-4>
+                    </div>
+                </a>
+
+                <a class="element" href="">
+                    <!-- img -->
+                    <div-1></div-1>
+                    <!-- -->
+                    <div>
+                        <div-2>8 ingredients</div-2>
+                        <div-3>Stuffed Honeynut Squash</div-3>
+                        <div-4>
+                            <div-5>Appetizer</div-5>
+                            <div-5>1h 30 mins</div-5>
+                            <div-5>420 calo</div-5>
+                        </div-4>
+                    </div>
+                </a>
+
+                <a class="element" href="">
+                    <!-- img -->
+                    <div-1></div-1>
+                    <!-- -->
+                    <div>
+                        <div-2>8 ingredients</div-2>
+                        <div-3>Stuffed Honeynut Squash</div-3>
+                        <div-4>
+                            <div-5>Appetizer</div-5>
+                            <div-5>1h 30 mins</div-5>
+                            <div-5>420 calo</div-5>
+                        </div-4>
+                    </div>
+                </a>
+
+                <a class="element" href="">
+                    <!-- img -->
+                    <div-1></div-1>
+                    <!-- -->
+                    <div>
+                        <div-2>8 ingredients</div-2>
+                        <div-3>Stuffed Honeynut Squash</div-3>
+                        <div-4>
+                            <div-5>Appetizer</div-5>
+                            <div-5>1h 30 mins</div-5>
+                            <div-5>420 calo</div-5>
+                        </div-4>
+                    </div>
+                </a>
+
+                <a class="element" href="">
+                    <!-- img -->
+                    <div-1></div-1>
+                    <!-- -->
+                    <div>
+                        <div-2>8 ingredients</div-2>
+                        <div-3>Stuffed Honeynut Squash</div-3>
+                        <div-4>
+                            <div-5>Appetizer</div-5>
+                            <div-5>1h 30 mins</div-5>
+                            <div-5>420 calo</div-5>
+                        </div-4>
+                    </div>
+                </a>
+
+                <a class="element" href="">
+                    <!-- img -->
+                    <div-1></div-1>
+                    <!-- -->
+                    <div>
+                        <div-2>8 ingredients</div-2>
+                        <div-3>Stuffed Honeynut Squash</div-3>
+                        <div-4>
+                            <div-5>Appetizer</div-5>
+                            <div-5>1h 30 mins</div-5>
+                            <div-5>420 calo</div-5>
+                        </div-4>
+                    </div>
+                </a>
+
+                <a class="element" href="">
+                    <!-- img -->
+                    <div-1></div-1>
+                    <!-- -->
+                    <div>
+                        <div-2>8 ingredients</div-2>
+                        <div-3>Stuffed Honeynut Squash</div-3>
+                        <div-4>
+                            <div-5>Appetizer</div-5>
+                            <div-5>1h 30 mins</div-5>
+                            <div-5>420 calo</div-5>
+                        </div-4>
+                    </div>
+                </a>
+
+                <a class="element" href="">
+                    <!-- img -->
+                    <div-1></div-1>
+                    <!-- -->
+                    <div>
+                        <div-2>8 ingredients</div-2>
+                        <div-3>Stuffed Honeynut Squash</div-3>
+                        <div-4>
+                            <div-5>Appetizer</div-5>
+                            <div-5>1h 30 mins</div-5>
+                            <div-5>420 calo</div-5>
+                        </div-4>
+                    </div>
+                </a>
+
+                <a class="element" href="">
+                    <!-- img -->
+                    <div-1></div-1>
+                    <!-- -->
+                    <div>
+                        <div-2>8 ingredients</div-2>
+                        <div-3>Stuffed Honeynut Squash</div-3>
+                        <div-4>
+                            <div-5>Appetizer</div-5>
+                            <div-5>1h 30 mins</div-5>
+                            <div-5>420 calo</div-5>
+                        </div-4>
+                    </div>
+                </a>
+
+                <a class="element" href="">
+                    <!-- img -->
+                    <div-1></div-1>
+                    <!-- -->
+                    <div>
+                        <div-2>8 ingredients</div-2>
+                        <div-3>Stuffed Honeynut Squash</div-3>
+                        <div-4>
+                            <div-5>Appetizer</div-5>
+                            <div-5>1h 30 mins</div-5>
+                            <div-5>420 calo</div-5>
+                        </div-4>
+                    </div>
+                </a>
+
+                <a class="element" href="">
+                    <!-- img -->
+                    <div-1></div-1>
+                    <!-- -->
+                    <div>
+                        <div-2>8 ingredients</div-2>
+                        <div-3>Stuffed Honeynut Squash</div-3>
+                        <div-4>
+                            <div-5>Appetizer</div-5>
+                            <div-5>1h 30 mins</div-5>
+                            <div-5>420 calo</div-5>
+                        </div-4>
+                    </div>
+                </a>
+            </div>
+
+            <div class="loadmore">
+                <button class="btn">
+                    <div>Load More</div>
+                    <img src="{{ url_for('static', filename='/IMG/IMG-SEARCH/loadmore.png')}}" alt="">
+                </button>
+            </div>
+            <!-- script -->
+            <script>
+                var wraper = document.querySelectorAll('.element');
+                var btn = document.querySelector('.btn');
+                var currentimg = 12;
+                btn.addEventListener('click',  
+                function(){
+                    for(var i = currentimg; i < currentimg + (wraper.length - 12); i++){
+                        if(wraper[i]){
+                            wraper[i].style.display = 'flex';
+                            wraper[i].style.flexDirection = 'column';
+                        }
+                    }
+                    currentimg += Math.max(12, wraper.length - currentimg);
+                    if(currentimg >= wraper.length){
+                        event.target.style.display = 'none';
+                        btn.style.display = 'none';
+                    }
+                });
+            </script>
         </div>
     </div>
+
+    <!-- ----------ADVERTISING---------- -->
+    <div class = "advertising">
+        Ad
+    </div>
+
+    <!-- ----------Section About---------- -->
+    <div class="section-6">
+        <div class="head-tile">
+            <p>MADE BY:</p>
+        </div>
+        <div class="member">
+            <div class="item">
+                <div class="box-avt">
+                    <img src="{{ url_for('static', filename='/IMG/IMG-HOME/CLONE.jpeg') }}" alt="avt">
+                </div>
+                <div class="info">
+                    <p>Valleny</p>
+                </div>
+                <div class="inf-mini">
+                    <p>Designer</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="box-avt">
+                    <img src="{{ url_for('static', filename='/IMG/IMG-HOME/CLONE.jpeg') }}" alt="avt">
+                </div>
+                <div class="info">
+                    <p>Orias</p>
+                </div>
+                <div class="inf-mini">
+                    <p>Front-end</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="box-avt">
+                    <img src="{{ url_for('static', filename='/IMG/IMG-HOME/CLONE.jpeg') }}" alt="avt">
+                </div>
+                <div class="info">
+                    <p>Maru</p>
+                </div>
+                <div class="inf-mini">
+                    <p>Back-end</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------Footer----------------->
+    <footer>
+        <img src="{{ url_for('static', filename='/IMG/IMG-HOME/thankyou.png') }}" alt="footer">
+    </footer>
 </body>

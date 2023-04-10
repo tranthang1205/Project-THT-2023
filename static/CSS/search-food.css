@@ -38,6 +38,7 @@ body::-webkit-scrollbar-thumb {
 header {
   position: fixed;
   z-index: 999;
+  top: 0;
   left: 0;
   right: 0;
   display: flex;
@@ -163,33 +164,30 @@ header .box-page .page-login:hover {
 }
 
 /*------------------------------BODY--------------------------*/
-.space {
-  padding: 17px;
-}
-
-.line {
-  width: 100%;
-  height: 0;
-}
-
-.big-space {
-  padding: 60px;
-}
-
 /*----------SECTION 1-----------*/
 section {
+  margin-top: 145px;
+  margin-bottom: 75px;
   height: 140px;
   background: #ECECEC;
   width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+section form{
+  height: 50px;
+
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 15px;
 }
 
-section label {
-  position: relative;
-}
+
 
 section .search {
   width: 440px;
@@ -197,17 +195,20 @@ section .search {
   background: #FFFFFF;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 40px;
+
   display: flex;
   align-items: center;
+
   padding-right: 6px;
   outline: none;
   border: none;
+
   font-family: 'Jost';
   font-style: italic;
   font-weight: 300;
   font-size: 20px;
   line-height: 29px;
-  justify-content: left;
+  
   color: rgba(0, 0, 0, 0.5);
   padding-left: 20px;
   padding-right: 120px;
@@ -229,17 +230,23 @@ section .search::placeholder {
   color: rgba(0, 0, 0, 0.5);
 }
 
+section label {
+  position: relative;
+}
+
 section .btn-search {
   position: absolute;
-  top: 10%;
-  right: 7px;
+  top: 5px;
+  left: 335px;
   width: 100px;
   height: 40px;
+
   background: #A7DCFE;
   border-radius: 40px;
   border: none;
   outline: none;
   cursor: pointer;
+
   font-family: 'Jost';
   font-style: normal;
   font-weight: 300;
@@ -268,19 +275,13 @@ section .recipe {
 }
 
 /*-----------------------*/
-.space2 {
-  padding: 40px;
-}
-
-.line2 {
+.divide {
   width: 1070px;
   height: 0px;
   border: 1px solid #0276AB;
   margin: auto;
-}
 
-.space3 {
-  padding: 20px;
+  margin-bottom: 35px;
 }
 
 /*--------------SEECTION 2----------------*/
@@ -294,49 +295,134 @@ section .recipe {
 /*-----------------LEFT-------------*/
 .section-2 .left {
   width: 240px;
-  height: 760px;
-  left: 185px;
-  top: 405px;
+  height: fit-content;
+  padding: 15px 15px;
+
   background: #FFFFFF;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  display: flex;
-  padding: 15px 15px;
-  flex-direction: column;
-  row-gap: 5px;
-}
 
-.section-2 .left .meal-type {
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
-  padding: 10px 2px;
+  gap: 20px;
+}
+ 
+/*---------------------- Meal type ----------------------*/
+
+.left-type{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
 }
 
-.section-2 .left .head-tile p {
-  font-family: 'Helvetica';
+.left-type p{
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  line-height: 23px;
+
   color: #000000;
 }
 
-.section-2 .left .ex {
-  width: 110px;
-  height: 30px;
-  background: #F0F2F4;
-  border-radius: 20px;
-  box-sizing: border-box;
+.left-type-box{
+  width: fit-content;
 }
-.section-2 .left input
-{
+
+.left-type-box input[type="checkbox"] {
   display: none;
 }
-.section-2 .left input:checked
-{
-  background-color: #0276AB;
+
+.left-type-box .checkmark {
+  width: fit-content;
+  height: fit-content;
+  background-color: #F0F2F4;
+  transition: ease background-color 300ms;
+
+  padding: 6px 14px;
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  cursor: pointer;
+
+  transition: .4s;
 }
+
+.left-type-box .checkmark div{
+  width: 12px;
+  height: 12px;
+  background-image: url(/static/IMG/IMG-SEARCH/tick.png); 
+
+  transition: .4s;
+}
+
+.left-type-box p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #4F505A;
+}
+
+/* ---------------------- Hover ---------------------- */
+.left-type-box:hover .checkmark {
+  background: #5594b0;
+}
+.left-type-box:hover .checkmark p {
+  color: white;
+}
+.left-type-box:hover .checkmark div{
+  background-image: url(/static/IMG/IMG-SEARCH/tick2.png);
+  transform: rotate(45deg);
+}
+
+/* ---------------------- Click ---------------------- */
+.left-type-box input[type="checkbox"]:checked ~ .checkmark {
+  background-color: #0276AB;
+
+  transition: ease background-color 300ms;
+}
+.left-type-box input[type="checkbox"]:checked + .checkmark p {
+  color: white;
+}
+.left-type-box input[type="checkbox"]:checked + .checkmark div{
+  background-image: url(/static/IMG/IMG-SEARCH/tick2.png);
+  transform: rotate(45deg);
+}
+/* Apply */
+.left .apply{
+  margin: auto;
+}
+
+.left .apply input[type=submit]{
+  width: 140px;
+  height: 40px;
+
+  background: #0276AB;
+
+  border: none;
+  border-radius: 20px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #FFFFFF;
+
+  cursor: pointer;
+}
+
+.left .apply input[type=submit]:hover{
+  box-shadow: 1px 3px 10px #52a7cf;
+
+  transition: ease box-shadow 300ms;
+}
+
 /*-----------RIGHT----------*/
 .section-2 .right {
   display: flex;
@@ -364,10 +450,305 @@ section .recipe {
   color: #292929;
 }
 
+/* main-page */
 .section-2 .right .bottom {
   width: 800px;
-  height: 1295px;
+  height: fit-content;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
   background: #FFFFFF;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 20px;
+  column-gap: 20px;
+
+  align-items: center;
+  justify-content: center;
+}
+/* Element */
+.element{
+  width: 240px;
+  height: 275px;
+  border-radius: 10px;
+  background: #F8F9FA;
+  cursor: pointer;
+
+  display: none;
+
+  text-decoration: none;
+
+}
+.element div-1{
+  width: 240px;
+  height: 150px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+
+
+  background-image: url(/static/IMG/IMG-SEARCH/element1.png);
+  object-fit: cover;
+}
+
+.element div{
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 10px;
+  padding-bottom: 15px;
+}
+
+.element div-2{
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;  
+  color: rgba(2, 118, 171, 0.8);
+}
+.element div-3{
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+  color: #191919;
+}
+.element div-4{
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 16px;
+  row-gap: 6px;
+}
+.element div-5{
+  width: fit-content;
+  height: fit-content;
+  padding: 1px 10px;
+  background: #0276AB;
+  border-radius: 10px;
+
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+/* animations */
+.element:hover{
+  box-shadow: 1.5px 1.5px 10px rgba(0, 0, 0, 0.15);
+
+}
+
+/* Load More */
+.loadmore{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loadmore button{
+  width: 150px;
+  height: 40px;
+  background: #FEFFFF;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 10px;
+}
+
+.loadmore button div{
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;  
+  color: #4F505A;
+}
+
+/* load more script */
+
+.element:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.element:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.element:nth-child(3){
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.element:nth-child(4){
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.element:nth-child(5){
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.element:nth-child(6){
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.element:nth-child(7){
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.element:nth-child(8){
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.element:nth-child(9){
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.element:nth-child(10){
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.element:nth-child(11){
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.element:nth-child(12){
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ----- Advertising ----- */
+.advertising{
+  width: 600px;
+  height: 50px;
+
+  border: 1px solid #876785;
+  border-radius: 10px;
+
+  margin: 60px auto 75px auto;
+
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  text-align: center;
+  color: #876785;
+}
+
+/* ----- Section About ----- */
+.section-6 {
+  width: 100%;
+  height: 600px;
+  background: #ECECEC;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 40px;
+  align-items: center;
+}
+
+.section-6 .head-tile p {
+  font-family: 'Jost';
+  font-style: normal;
+
+  font-weight: 300;
+  font-size: 50px;
+  line-height: 72px;
+  text-align: center;
+  color: #000000;
+}
+
+.section-6 .member {
+  display: flex;
+  justify-content: space-between;
+  width: 937px;
+}
+
+.section-6 .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.section-6 .member .box-avt {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.section-6 .box-avt img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.section-6 .item .info p {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 43px;
+  text-align: center;
+
+  color: #000000;
+}
+
+.section-6 .item .inf-mini p {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 35px;
+  /* identical to box height */
+
+
+  color: #000000;
+}
+/*----------ANIMATION---------------*/
+.img-item .box-img
+{
+  overflow: hidden;
+}
+.img-item .box-img img 
+{
+  max-width: 100%;
+  transition: all 0.5s;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+}
+.img-item .box-img:hover img
+{
+
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+/*-------FOOTER----*/
+footer {
+  height: 100px;
+  width: 100%;
+  background: #A7DCFE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
