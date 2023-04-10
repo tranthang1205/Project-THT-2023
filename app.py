@@ -20,19 +20,20 @@ def login():
     
     return render_template('login.html')
 
-@app.route('/landing', methods=['GET', 'POST'])
+@app.route('/landing')
 def landing():
-    if request.method == 'POST':
-        return render_template('home.html')
-    return render_template('landing.html')
 
-@app.route('/search-food')
-def search():
-    return render_template('search-food.html')
+    return render_template('landing.html')
 
 @app.route('/home')
 def home():
     return render_template('home.html')
+
+@app.route('/search-food')
+def searchfood():
+    return render_template('search-food.html')
+
+
 
 @app.route('/logout')
 def logout():

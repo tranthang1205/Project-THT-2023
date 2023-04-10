@@ -100,6 +100,14 @@ body{
     color: #98b9c1;
     transition: ease color 300ms;
 }
+.landing-1 div-3 a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+}
 .landing-1 div-3 button div{
     font-family: 'Roboto', sans-serif;
     font-style: normal;
