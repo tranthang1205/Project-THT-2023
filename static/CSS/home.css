@@ -87,30 +87,78 @@ header .box-page a {
   text-decoration: none;
 }
 
+header .page-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom: solid 1px transparent;
+  transition: all 0.5s;
+}
+
 header .page-home {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-left: 5px;
   padding-right: 5px;
-  border-bottom: solid 4px #E98E7D;
+  border-bottom: solid 1px transparent;
+  transition: all 0.5s;
 }
+
+header .page-tip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom: solid 1px transparent;
+  transition: all 0.5s;
+}
+
+header .page-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom: solid 1px transparent;
+  transition: all 0.5s;
+}
+
+/*-------ANIMATION HEADER---------*/
 
 header .box-page .page-home a {
   color: #E98E7D;
 }
-/*-------ANIMATION HEADER---------*/
+
+header .box-page .page-search:hover {
+  border-bottom: #E98E7D solid 1px;
+}
+
 header .box-page .page-search a:hover {
   color: #E98E7D;
 }
 
+header .box-page .page-home:hover {
+  border-bottom: #E98E7D solid 1px;
+}
+
 header .box-page .page-tip a:hover {
   color: #E98E7D;
-  ;
+}
+
+header .box-page .page-tip:hover {
+  border-bottom: #E98E7D solid 1px;
 }
 
 header .box-page .page-login a:hover {
   color: #E98E7D;
+}
+
+header .box-page .page-login:hover {
+  border-bottom: #E98E7D solid 1px;
 }
 
 /*------------------------------BODY--------------------------*/
