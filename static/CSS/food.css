@@ -1,0 +1,471 @@
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: #F5F5F5;
+    font-family: system-ui;
+}
+
+/*-------------------------scrollbar-------------------*/
+body::-webkit-scrollbar
+
+/*SIZE*/
+    {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #1f2028;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 50px;
+}
+
+/*-----------HEADER-----*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #292929;
+}
+
+header {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.box {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.box-logo {
+    width: 205px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .box-logo img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+
+}
+
+header .box-page {
+    display: flex;
+    column-gap: 10%;
+    width: 379px;
+}
+
+header .box-page a {
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 28px;
+    /* identical to box height */
+    color: #191919;
+    text-decoration: none;
+}
+
+header .page-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom: solid 1px transparent;
+    transition: all 0.5s;
+}
+
+header .page-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom: solid 1px transparent;
+    transition: all 0.5s;
+}
+
+header .page-tip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom: solid 1px transparent;
+    transition: all 0.5s;
+}
+
+header .page-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom: solid 1px transparent;
+    transition: all 0.5s;
+}
+
+/*-------ANIMATION HEADER---------*/
+
+
+header .box-page .page-search:hover {
+    border-bottom: #E98E7D solid 1px;
+}
+
+header .box-page .page-search a:hover {
+    color: #E98E7D;
+}
+
+header .box-page .page-home:hover {
+    border-bottom: #E98E7D solid 1px;
+}
+
+header .box-page .page-home a:hover {
+    color: #E98E7D;
+}
+
+header .box-page .page-tip a:hover {
+    color: #E98E7D;
+}
+
+header .box-page .page-tip:hover {
+    border-bottom: #E98E7D solid 1px;
+}
+
+header .box-page .page-login a:hover {
+    color: #E98E7D;
+}
+
+header .box-page .page-login:hover {
+    border-bottom: #E98E7D solid 1px;
+}
+
+/*------------------------------BODY--------------------------*/
+section {
+    width: 100%;
+    height: 1800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+/*-------SECTION MAIN-------*/
+section .main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 397px;
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 40px;
+}
+
+/*------TEXT--------*/
+section .main-text {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 15px 0px;
+    row-gap: 90px;
+}
+
+section .main-text .main-text-1 {
+    width: 363px;
+    height: 180px;
+}
+
+section .main .main-text .text-1 {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 58px;
+    /* identical to box height */
+    color: #191919;
+}
+
+section .main .main-text .text-2 {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height */
+    color: #E98E7D;
+}
+
+section .main .main-text .text-3 {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 35px;
+
+    color: #191919;
+
+}
+
+section .main .main-text-2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+section .main-text-2 div {
+    width: 137px;
+    height: 73px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+section .main-text-2 .ingredients {
+    border-right: 1px solid #CCCCCC;
+}
+
+section .main-text-2 .minute {
+    border-right: 1px solid #CCCCCC;
+}
+
+section .main-text-2 .number {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 40px;
+    line-height: 58px;
+    /* identical to box height */
+    color: #4F505A;
+}
+
+section .main-text-2 .intro {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+    color: #4F505A;
+
+}
+
+/*---------IMG-----------*/
+section .main .main-img {
+    width: 600px;
+    height: 360px;
+}
+
+section .main-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/*-------SECTION IMGREDIENTS-------*/
+.main-2 {
+    width: 100%;
+    padding-top: 55px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.main-2 .head {
+
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 58px;
+    color: #191919;
+}
+
+.main-2 .list {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.main-2 .list .item {
+    display: flex;
+    column-gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.main-2 .list .circle {
+    width: 3px;
+    height: 3px;
+    background-color: #E98E7D;
+    border-radius: 50%;
+}
+
+.main-2 .list .item .text {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 29px;
+    color: #191919;
+}
+
+.main-2 .directions {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.main-2 .directions .step {
+    width: 700px;
+    height: 214px;
+}
+
+.main-2 .directions .step .head {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 43px;
+    text-decoration-line: underline;
+    color: #191919;
+}
+
+.main-2 .directions .step .info {
+    text-indent: 40px;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    color: #191919;
+}
+
+/* ----- Advertising ----- */
+.advertising {
+    width: 600px;
+    height: 50px;
+
+    border: 1px solid #876785;
+    border-radius: 10px;
+
+    margin: 60px auto 75px auto;
+
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    text-align: center;
+    color: #876785;
+}
+
+/* ----- Section About ----- */
+.section-6 {
+    width: 100%;
+    height: 600px;
+    background: #ECECEC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 40px;
+    align-items: center;
+}
+
+.section-6 .head-tile p {
+    font-family: 'Jost';
+    font-style: normal;
+
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 72px;
+    text-align: center;
+    color: #000000;
+}
+
+.section-6 .member {
+    display: flex;
+    justify-content: space-between;
+    width: 937px;
+}
+
+.section-6 .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.section-6 .member .box-avt {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.section-6 .box-avt img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.section-6 .item .info p {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 43px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.section-6 .item .inf-mini p {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 35px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+
+/*-------FOOTER----*/
+footer {
+    height: 100px;
+    width: 100%;
+    background: #E98E7D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

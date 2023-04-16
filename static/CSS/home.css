@@ -61,8 +61,6 @@ header.box-logo {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  text-decoration: none;
 }
 
 header .box-logo img {
@@ -250,7 +248,7 @@ section {
   top: 20px;
 }
 
-.find-info a {
+.find-info .text {
   text-decoration: none;
   font-family: 'Georgia';
   font-style: normal;
@@ -258,8 +256,308 @@ section {
   font-size: 24px;
   line-height: 27px;
   text-align: center;
-
+  cursor: pointer;
   color: #AAD4B3;
+}
+/*--------------------------POP UP----------------*/
+#bg {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+
+}
+
+#bg.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#bg #container {
+  position: relative;
+  width: 1000px;
+  height: 500px;
+  left: 0px;
+  top: -100px;
+  background: #8EC299;
+  border-radius: 5px;
+  padding: 3px 10px;
+  transition: all 0.25s ease-in-out;
+}
+#bg.show #container
+{
+  top: 0px;
+}
+
+#container .head {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 49px;
+  /* identical to box height */
+  color: #0F5152;
+}
+
+#container .headtile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#container .box {
+  display: flex;
+  column-gap: 5px;
+  width: 980px;
+  height: 440px;
+}
+
+#container .box-1 {
+  width: 575px;
+  height: 440px;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#container .box-2 {
+  width: 400px;
+  height: 440px;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+
+#container .box-1 #search {
+  width: 470px;
+  height: 60px;
+  left: 62px;
+  top: 80px;
+
+  border: 1px solid #0F5152;
+  border-radius: 30px;
+  outline: none;
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 35px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#container .box-1 #search input:focus {
+  outline: none;
+}
+
+#container .add-img {
+  width: 470px;
+  height: 239px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.add-img .text {
+  width: 332px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.add-img .text p {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 29px;
+  text-align: center;
+
+  color: #0F5152;
+}
+
+.add-img label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+  width: 150px;
+  height: 40px;
+  left: 222px;
+  top: 276px;
+  border: 1px solid #0F5152;
+  border-radius: 30px;
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  cursor: pointer;
+  color: #0F5152;
+}
+
+.choose-ingredient {
+  width: 478px;
+  height: 79px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.choose-ingredient p {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  color: #000000;
+}
+
+.choose-ingredient .list-choose {
+  display: flex;
+  justify-content: space-between;
+}
+
+.choose-ingredient .list-choose .item {
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+  border: 1px solid #0F5152;
+  border-radius: 30px;
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  color: #0F5152;
+  cursor: pointer;
+  transition: all 0.5s;
+
+}
+
+/*----ANIMATION--------*/
+.choose-ingredient .list-choose .item:hover {
+  background-color: #0F5152;
+  color: white;
+}
+
+.choose-ingredient .list-choose .item:hover i {
+  transform: rotate(45deg);
+}
+
+/*---------BOX-2-------*/
+.box-2 .head-2 {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  column-gap: 20%;
+}
+
+.box-2 .chosen-ingredient {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  /* identical to box height */
+  color: #000000;
+
+}
+
+.box-2 .clear-all {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  color: #0F5152;
+
+}
+
+.box-2 .list-add {
+  margin-top: 20px;
+  width: 348px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.box-2 .list-add .item {
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 5px;
+  border: 1px solid #0F5152;
+  border-radius: 30px;
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  color: #0F5152;
+  cursor: pointer;
+  transition: all 0.5s;
+
+}
+
+.box-2 .list-add .item i {
+  transform: rotate(45deg);
+}
+
+.box-2,
+.list-add .item:hover {
+  background-color: #0F5152;
+  color: white;
+}
+
+.find {
+  margin: auto;
+  width: 150px;
+  height: 40px;
+  background: #AAD4B3;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  column-gap: 5px;
+  color: #0F5152;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.find:hover {
+  box-shadow: 0px 4px 50px #8EC299;
 }
 
 /*-----------ADVERTISEMENT--------*/
@@ -349,7 +647,6 @@ section-2 .box-text .box-special {
   line-height: 26px;
   /* identical to box height */
 
-
   color: #FFFFFF;
 }
 
@@ -378,7 +675,6 @@ section-2 .box-text .box-special {
   font-size: 18px;
   line-height: 26px;
   /* identical to box height */
-
 
   color: #292929;
 
@@ -730,7 +1026,6 @@ section-2 .box-text .box-special {
   font-size: 24px;
   line-height: 35px;
   /* identical to box height */
-
 
   color: #000000;
 }

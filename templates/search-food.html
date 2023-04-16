@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="shortcut icon" href="{{url_for('static',filename='IMG/favicon.png')}}" type="image/x-icon">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,16 +12,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Dosis:wght@200;300;400;500;600;700;800&family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
     <!----------------------HEADER----------------->
     <header>
-        <div class="box">
-            <a href="{{ url_for('landing') }}" class="box-logo">
+        <form class="box">
+            <label class="box-logo">
                 <img src=" {{ url_for('static', filename='IMG//IMG-SEARCH/logo.png') }}" alt="logo">
-            </a>
-            <div class="box-page">
+            </label>
+            <label class="box-page">
                 <div class="page-home">
                     <a href="{{ url_for('home') }}">Home</a>
                 </div>
@@ -33,8 +35,8 @@
                 <div class="page-login">
                     <a href="">Login</a>
                 </div>
-            </div>
-        </div>
+            </label>
+        </form>
     </header>
     <!-------------BODY--------------->
 
@@ -44,11 +46,98 @@
                 <input class="search" type="text" placeholder="Enter name">
                 <input class="btn-search" type="submit" value="Search">
             </label>
-            <input type="submit" value="Recipe-Generator" class="recipe">
+           <!-- <input id="btn-open" type="submit" value="Recipe-Generator" class="recipe" onclick="openPopup()">
+            -->
+            <div class="recipe" id="btn-open">Recipe-Generator</div>
         </form>
     </section>
 
     <div class="divide"></div>
+     <!----------------POP UP------------------>
+     <div id="bg">
+        <div id="container">
+            <div class="headtile">
+                <p class="head">Recipe-Generator</p>
+                <i style="cursor: pointer;" id="btn-close" class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="box">
+                <div class="box-1">
+                    <input type="text" name="search" id="search" placeholder="Enter ingredient">
+                    <div class="add-img">
+                        <div class="text">
+                            <p class="mini-text">
+                                Or, you can try using our powerful
+                                ingredient detector powered by Yolov5
+                            </p>
+                        </div>
+                        <!--default html file upload button-->
+                        <input type="file" id="actual-btn" hidden />
+                        <!--our custom file upload button-->
+                        <label for="actual-btn">
+                            <i class="fa-regular fa-image"></i>
+                            Upload File
+                        </label>
+                    </div>
+                    <div class="choose-ingredient">
+                        <p>Common Ingredients</p>
+                        <div class="list-choose">
+                            <div class="item">
+                                <i class="fa-solid fa-plus"></i>
+                                Lorem ipsum
+                            </div>
+                            <div class="item">
+                                <i class="fa-solid fa-plus"></i>
+                                Lorem ipsum
+                            </div>
+                            <div class="item">
+                                <i class="fa-solid fa-plus"></i>
+                                Lorem ipsum
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-2">
+                    <div class="head-2">
+                        <div class="chosen-ingredient">
+                            <i class="fa-solid fa-list-ul"></i>
+                            Chosen Ingredients
+                        </div>
+                        <div class="clear-all">
+                            Clear all
+                        </div>
+                    </div>
+                    <div class="list-add">
+                        <div class="item">
+                            <i class="fa-solid fa-plus"></i>
+                            Lorem ipsum
+                        </div>
+                        <div class="item">
+                            <i class="fa-solid fa-plus"></i>
+                            Lorem ipsum
+                        </div>
+                    </div>
+                    <form class="find">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        Find Recipes
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        const btn_open = document.getElementById('btn-open');
+        const btn_close = document.getElementById('btn-close');
+        const bg = document.getElementById('bg');
+        btn_open.addEventListener('click',()=>{
+            //SHOW
+            bg.classList.add('show');
+        });
+        btn_close.addEventListener('click',()=>{
+            //HIDE
+            bg.classList.remove('show');
+        });  
+    </script>
     <!---------------------SECION -MAIN------------------------------------>
     <div class="section-2">
         <!-- left -->
@@ -187,7 +276,7 @@
                     <p>144 results for “Ma”</p>
             </div>
             <div class="bottom">
-                <a class="element" href="">
+                <a class="element" href="{{ url_for('food') }}">
                     <!-- img -->
                     <div-1></div-1>
                     <!-- -->

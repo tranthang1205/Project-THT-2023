@@ -37,7 +37,9 @@ def searchfood():
 def searchingredients():
     return render_template('search-ingredients.html')
 
-
+@app.route('/food')
+def food():
+    return render_template('food.html')
 
 @app.route('/logout')
 def logout():
