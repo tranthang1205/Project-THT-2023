@@ -74,8 +74,8 @@ header .box-logo img {
 
 header .box-page {
   display: flex;
-  column-gap: 10%;
-  width: 379px;
+  column-gap: 15%;
+  width: 300px;
 }
 
 header .box-page a {
@@ -338,6 +338,8 @@ section .recipe {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
+  padding: 0px 10px;
 }
 
 #container .box {

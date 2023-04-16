@@ -74,8 +74,8 @@
   
   header .box-page {
     display: flex;
-    column-gap: 10%;
-    width: 379px;
+    column-gap: 15%;
+    width: 300px;
   }
   
   header .box-page a {
