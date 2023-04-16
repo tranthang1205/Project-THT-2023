@@ -432,7 +432,8 @@ section {
 
 .choose-ingredient .list-choose {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  column-gap: 10px;
 }
 
 .choose-ingredient .list-choose .item {
@@ -504,36 +505,82 @@ section {
   column-gap: 10px;
 }
 
-.box-2 .list-add .item {
-  width: 150px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  column-gap: 5px;
-  border: 1px solid #0F5152;
-  border-radius: 30px;
-  font-family: 'Dosis';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 25px;
-  color: #0F5152;
-  cursor: pointer;
-  transition: all 0.5s;
 
+.left-type-box {
+  width: fit-content;
+  height: fit-content;
 }
 
-.box-2 .list-add .item i {
+.left-type-box input[type="checkbox"] {
+  display: none;
+}
+
+.left-type-box .checkmark {
+  width: fit-content;
+  height: fit-content;
+  background-color: #F0F2F4;
+  transition: ease background-color 300ms;
+
+  padding: 6px 14px;
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  cursor: pointer;
+
+  transition: .4s;
+}
+
+.left-type-box .checkmark div {
+  width: 12px;
+  height: 12px;
+  background-image: url(/static/IMG/IMG-SEARCH/tick.png);
+
+  transition: .4s;
+}
+
+.left-type-box p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #4F505A;
+}
+
+/* ---------------------- Hover ---------------------- */
+.left-type-box:hover .checkmark {
+  background: #5594b0;
+}
+
+.left-type-box:hover .checkmark p {
+  color: white;
+}
+
+.left-type-box:hover .checkmark div {
+  background-image: url(/static/IMG/IMG-SEARCH/tick2.png);
   transform: rotate(45deg);
 }
 
-.box-2,
-.list-add .item:hover {
-  background-color: #0F5152;
+/* ---------------------- Click ---------------------- */
+.left-type-box input[type="checkbox"]:checked~.checkmark {
+  background-color: #0276AB;
+
+  transition: ease background-color 300ms;
+}
+
+.left-type-box input[type="checkbox"]:checked+.checkmark p {
   color: white;
 }
+
+.left-type-box input[type="checkbox"]:checked+.checkmark div {
+  background-image: url(/static/IMG/IMG-SEARCH/tick2.png);
+  transform: rotate(45deg);
+}
+
 
 .find {
   margin: auto;

@@ -461,35 +461,9 @@ section .recipe {
   display: flex;
   justify-content: space-between;
 }
-
-.choose-ingredient .list-choose .item {
-  width: 150px;
-  height: 40px;
-  display: flex;
+.choose-ingredient .list-choose{
   justify-content: center;
-  align-items: center;
-  column-gap: 5px;
-  border: 1px solid #0F5152;
-  border-radius: 30px;
-  font-family: 'Dosis';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 25px;
-  color: #0F5152;
-  cursor: pointer;
-  transition: all 0.5s;
-
-}
-
-/*----ANIMATION--------*/
-.choose-ingredient .list-choose .item:hover {
-  background-color: #0F5152;
-  color: white;
-}
-
-.choose-ingredient .list-choose .item:hover i {
-  transform: rotate(45deg);
+  column-gap: 10px;
 }
 
 /*---------BOX-2-------*/
@@ -630,6 +604,7 @@ section .recipe {
 
 .left-type-box {
   width: fit-content;
+  height: fit-content;
 }
 
 .left-type-box input[type="checkbox"] {

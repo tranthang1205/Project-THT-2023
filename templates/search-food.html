@@ -20,7 +20,7 @@
     <header>
         <form class="box">
             <label class="box-logo">
-                <img src=" {{ url_for('static', filename='IMG//IMG-SEARCH/logo.png') }}" alt="logo">
+                <a href="{{url_for('landing')}}"><img src=" {{ url_for('static', filename='IMG//IMG-SEARCH/logo.png') }}" alt="logo"></a>
             </label>
             <label class="box-page">
                 <div class="page-home">
@@ -80,20 +80,29 @@
                     </div>
                     <div class="choose-ingredient">
                         <p>Common Ingredients</p>
-                        <div class="list-choose">
-                            <div class="item">
-                                <i class="fa-solid fa-plus"></i>
-                                Lorem ipsum
-                            </div>
-                            <div class="item">
-                                <i class="fa-solid fa-plus"></i>
-                                Lorem ipsum
-                            </div>
-                            <div class="item">
-                                <i class="fa-solid fa-plus"></i>
-                                Lorem ipsum
-                            </div>
-                        </div>
+                        <form class="list-choose">
+                            <label class="left-type-box">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkmark">
+                                    <div></div>
+                                    <p>lorem</p>
+                                </span>
+                            </label>
+                            <label class="left-type-box">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkmark">
+                                    <div></div>
+                                    <p>lorem</p>
+                                </span>
+                            </label>
+                            <label class="left-type-box">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkmark">
+                                    <div></div>
+                                    <p>lorem</p>
+                                </span>
+                            </label>
+                        </form>
                     </div>
                 </div>
                 <div class="box-2">
@@ -107,14 +116,20 @@
                         </div>
                     </div>
                     <div class="list-add">
-                        <div class="item">
-                            <i class="fa-solid fa-plus"></i>
-                            Lorem ipsum
-                        </div>
-                        <div class="item">
-                            <i class="fa-solid fa-plus"></i>
-                            Lorem ipsum
-                        </div>
+                        <label class="left-type-box">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkmark">
+                                <div></div>
+                                <p>lorem</p>
+                            </span>
+                        </label>
+                        <label class="left-type-box">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkmark">
+                                <div></div>
+                                <p>lorem</p>
+                            </span>
+                        </label>
                     </div>
                     <form class="find">
                         <i class="fa-solid fa-arrow-right"></i>
