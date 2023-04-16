@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search - Le Cusiner</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/search-food.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/search-ingredients.css')}}">
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,13 +39,10 @@
     <!-------------BODY--------------->
 
     <section>
-        <form action="">
-            <label for="">
-                <input class="search" type="text" placeholder="Enter name">
-                <input class="btn-search" type="submit" value="Search">
-            </label>
-            <input type="submit" value="Recipe-Generator" class="recipe">
-        </form>
+        <div>
+            <button class="ingredients">Choose ingredients again</button>
+            <a class="food" href="{{ url_for('searchfood') }}">Or search by name</a>
+        </div>
     </section>
 
     <div class="divide"></div>
@@ -184,7 +181,13 @@
         <!-- right -->
         <div class="right">
             <div class="top">
-                    <p>144 results for “Ma”</p>
+                    <div-0>144 results</div-0>
+                    <div-1></div-1>
+                    <div-2>
+                        <div-3>Banana</div-3>
+                        <div-3>Onion</div-3>
+                        <div-3>Garlic</div-3>
+                    </div-2>
             </div>
             <div class="bottom">
                 <a class="element" href="">

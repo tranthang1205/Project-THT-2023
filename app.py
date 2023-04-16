@@ -33,6 +33,10 @@ def home():
 def searchfood():
     return render_template('search-food.html')
 
+@app.route('/search-ingredients')
+def searchingredients():
+    return render_template('search-ingredients.html')
+
 
 
 @app.route('/logout')

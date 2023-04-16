@@ -61,6 +61,8 @@ header.box-logo {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  text-decoration: none;
 }
 
 header .box-logo img {

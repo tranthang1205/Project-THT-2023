@@ -13,9 +13,9 @@
     <!----------------------HEADER----------------->
     <header>
         <div class="box">
-            <div class="box-logo">
+            <a href="{{ url_for('landing')}}" class="box-logo">
                 <img src="{{ url_for('static', filename='IMG/IMG-HOME/logo-fix.png') }}" alt="logo">
-            </div>
+            </a>
             <div class="box-page">
                 <div class="page-home">
                     <a href="{{ url_for('home') }}">Home</a>
