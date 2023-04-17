@@ -67,20 +67,51 @@
                 <div class="box-1">
                     <input type="text" name="search" id="search" placeholder="Enter ingredient">
                     <div class="add-img">
-                        <div class="text">
+                        <!---img-->
+                        <div class="image-preview" id="imagePreview">
+                            <img src="" alt="Image Preview" class="image-preview__image">
+                        </div>
+                        <!---------->
+                        <div class="text" id="textt">
                             <p class="mini-text">
                                 Or, you can try using our powerful
                                 ingredient detector powered by Yolov5
                             </p>
                         </div>
                         <!--default html file upload button-->
-                        <input type="file" id="actual-btn" hidden />
+                        <input type="file" name="inpFile" id="inpFile" hidden />
                         <!--our custom file upload button-->
-                        <label for="actual-btn">
+                        <label for="inpFile" id="custom-btn" onclick="defaultBtnActive()">
                             <i class="fa-regular fa-image"></i>
                             Upload File
                         </label>
                     </div>
+                     <!---------------------------SCRIP IMG---------->
+                    <script>
+                        const upload = document.getElementById("custom-btn")
+                        const textt = document.getElementById("textt")
+                        const inpFile = document.getElementById("inpFile");
+                        const previewContainer = document.getElementById("imagePreview");
+                        const previewImage = previewContainer.querySelector(".image-preview__image");
+                        inpFile.addEventListener("change",function(){
+                        
+                            const file=this.files[0];
+                            if(file){
+                                const reader = new FileReader();
+                                
+                                upload.display = "none";
+                                textt.style.display="none";
+                                previewContainer.style.display="block";
+                                previewImage.style.display="block";
+                                reader.addEventListener("load",function(){
+                                console.log(this)
+                                previewImage.setAttribute("src",this.result);
+                            });
+                            reader.readAsDataURL(file);
+                            }
+                        });
+                    </script>
+                    <!------------------------------------------->
                     <div class="choose-ingredient">
                         <p>Common Ingredients</p>
                         <form class="list-choose">

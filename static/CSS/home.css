@@ -376,8 +376,39 @@ section {
   flex-direction: column;
   align-items: center;
   row-gap: 20px;
+  object-fit: cover;
 }
-
+/*-------IMG-----------*/
+.image-preview {
+  margin-top: 6px;
+  border-radius: 5px;
+  width: 416px;
+  height: 319px;
+  overflow: hidden;
+  object-fit: cover;
+  display: none;
+ 
+}
+.image-preview__image{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+/*.add-img .image
+  { 
+    object-fit: cover;
+  }
+  .add-img .image img
+  {
+    position: absolute;
+    width: 95%;
+    height: 90%;
+    object-fit: cover;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+  }*/
 .add-img .text {
   width: 332px;
   height: 56px;
@@ -547,10 +578,11 @@ section {
 
   transition: .4s;
 }
-label i
-{
+
+label i {
   color: #0F5152;
 }
+
 .left-type-box p {
   font-family: 'Dosis';
   font-style: normal;
