@@ -10,7 +10,10 @@
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Dosis:wght@200;300;400;500;600;700;800&family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Dosis:wght@200;300;400;500;600;700;800&family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -37,12 +40,120 @@
 
     <section>
         <div>
-            <button class="ingredients">Choose ingredients again</button>
+            <div id="btn-open" class="ingredients">Choose ingredients again</div>
             <a class="food" href="{{ url_for('searchfood') }}">Or search by name</a>
         </div>
     </section>
 
     <div class="divide"></div>
+    <!----------------POP UP------------------>
+    <div id="bg">
+        <div id="container">
+            <div class="headtile">
+                <p class="head">Recipe-Generator</p>
+                <i style="cursor: pointer;" id="btn-close" class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="box">
+                <div class="box-1">
+                    <input type="text" name="search" id="search" placeholder="Enter ingredient">
+                    <div class="add-img">
+                        <div class="text">
+                            <p class="mini-text">
+                                Or, you can try using our powerful
+                                ingredient detector powered by Yolov5
+                            </p>
+                        </div>
+                        <!--default html file upload button-->
+                        <input type="file" id="actual-btn" hidden />
+                        <!--our custom file upload button-->
+                        <label for="actual-btn">
+                            <i class="fa-regular fa-image"></i>
+                            Upload File
+                        </label>
+                    </div>
+                    <div class="choose-ingredient">
+                        <p>Common Ingredients</p>
+                        <form class="list-choose">
+                            <label class="ctype-box">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkmark">
+                                    <div></div>
+                                    <p>Lorem ipsum</p>
+                                </span>
+                            </label>
+                            <label class="ctype-box">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkmark">
+                                    <div></div>
+                                    <p>Lorem ipsum</p>
+                                </span>
+                            </label>
+                            <label class="ctype-box">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkmark">
+                                    <div></div>
+                                    <p>Lorem ipsum</p>
+                                </span>
+                            </label>
+                        </form>
+                    </div>
+                </div>
+                <div class="box-2">
+                    <div class="head-2">
+                        <div class="chosen-ingredient">
+                            <i class="fa-solid fa-list-ul"></i>
+                            Chosen Ingredients
+                        </div>
+                        <div class="clear-all">
+                            Clear all
+                        </div>
+                    </div>
+                    <div class="list-add">
+                        <label class="ctype-box">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkmark">
+                                <div></div>
+                                <p>Lorem ipsum</p>
+                            </span>
+                        </label>
+                        <label class="ctype-box">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkmark">
+                                <div></div>
+                                <p>Lorem ipsum</p>
+                            </span>
+                        </label>
+                    </div>
+                    <button>
+                        <div class="svg-wrapper-1">
+                            <div class="svg-wrapper">
+                                <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 12L8.6 10.55L12.15 7H0V5H12.15L8.6 1.45L10 0L16 6L10 12Z"
+                                        fill="#0F5152" />
+                                </svg>
+                            </div>
+                        </div>
+                        <span>Find Recipes</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        const btn_open = document.getElementById('btn-open');
+        const btn_close = document.getElementById('btn-close');
+        const bg = document.getElementById('bg');
+        btn_open.addEventListener('click', () => {
+            //SHOW
+            bg.classList.add('show');
+        });
+        btn_close.addEventListener('click', () => {
+            //HIDE
+            bg.classList.remove('show');
+        });  
+    </script>
     <!---------------------SECION -MAIN------------------------------------>
     <div class="section-2">
         <!-- left -->
@@ -100,7 +211,8 @@
                     <input type="checkbox" name="" id="">
                     <span class="checkmark">
                         <div></div>
-                        <p>< 200</p>
+                        <p>
+                            < 200</p>
                     </span>
                 </label>
                 <label class="left-type-box">
@@ -178,13 +290,13 @@
         <!-- right -->
         <div class="right">
             <div class="top">
-                    <div-0>144 results</div-0>
-                    <div-1></div-1>
-                    <div-2>
-                        <div-3>Banana</div-3>
-                        <div-3>Onion</div-3>
-                        <div-3>Garlic</div-3>
-                    </div-2>
+                <div-0>144 results</div-0>
+                <div-1></div-1>
+                <div-2>
+                    <div-3>Banana</div-3>
+                    <div-3>Onion</div-3>
+                    <div-3>Garlic</div-3>
+                </div-2>
             </div>
             <div class="bottom">
                 <a class="element" href="">
@@ -424,26 +536,26 @@
                 var wraper = document.querySelectorAll('.element');
                 var btn = document.querySelector('.btn');
                 var currentimg = 12;
-                btn.addEventListener('click',  
-                function(){
-                    for(var i = currentimg; i < currentimg + (wraper.length - 12); i++){
-                        if(wraper[i]){
-                            wraper[i].style.display = 'flex';
-                            wraper[i].style.flexDirection = 'column';
+                btn.addEventListener('click',
+                    function () {
+                        for (var i = currentimg; i < currentimg + (wraper.length - 12); i++) {
+                            if (wraper[i]) {
+                                wraper[i].style.display = 'flex';
+                                wraper[i].style.flexDirection = 'column';
+                            }
                         }
-                    }
-                    currentimg += Math.max(12, wraper.length - currentimg);
-                    if(currentimg >= wraper.length){
-                        event.target.style.display = 'none';
-                        btn.style.display = 'none';
-                    }
-                });
+                        currentimg += Math.max(12, wraper.length - currentimg);
+                        if (currentimg >= wraper.length) {
+                            event.target.style.display = 'none';
+                            btn.style.display = 'none';
+                        }
+                    });
             </script>
         </div>
     </div>
 
     <!-- ----------ADVERTISING---------- -->
-    <div class = "advertising">
+    <div class="advertising">
         Ad
     </div>
 
