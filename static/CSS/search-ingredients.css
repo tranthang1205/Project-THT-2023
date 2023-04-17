@@ -405,7 +405,10 @@ section div .food:hover{
   cursor: pointer;
   color: #0F5152;
 }
-
+label i
+{
+  color: #0F5152;
+}
 .choose-ingredient {
   width: 478px;
   height: 79px;

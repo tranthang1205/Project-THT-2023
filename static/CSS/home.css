@@ -547,7 +547,10 @@ section {
 
   transition: .4s;
 }
-
+label i
+{
+  color: #0F5152;
+}
 .left-type-box p {
   font-family: 'Dosis';
   font-style: normal;

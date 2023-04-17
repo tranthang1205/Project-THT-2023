@@ -498,7 +498,10 @@ section .recipe {
   color: #0F5152;
 
 }
-
+label i
+{
+  color: #0F5152;
+}
 .box-2 .list-add {
   margin-top: 20px;
   width: 348px;
