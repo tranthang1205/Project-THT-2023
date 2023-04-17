@@ -48,6 +48,7 @@ header {
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .box {
   width: 80%;
   display: flex;
@@ -259,6 +260,7 @@ section {
   cursor: pointer;
   color: #AAD4B3;
 }
+
 /*--------------------------POP UP----------------*/
 #bg {
   background-color: rgba(0, 0, 0, 0.5);
@@ -292,8 +294,8 @@ section {
   padding: 3px 10px;
   transition: all 0.25s ease-in-out;
 }
-#bg.show #container
-{
+
+#bg.show #container {
   top: 0px;
 }
 
@@ -520,7 +522,8 @@ section {
 .left-type-box .checkmark {
   width: fit-content;
   height: fit-content;
-  background-color: #F0F2F4;
+  border: 1px solid #0F5152;
+  border-radius: 30px;
   transition: ease background-color 300ms;
 
   padding: 6px 14px;
@@ -546,16 +549,19 @@ section {
 }
 
 .left-type-box p {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Dosis';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 20px;
-  color: #4F505A;
+  line-height: 25px;
+  text-align: center;
+
+  color: #0F5152;
 }
 
 /* ---------------------- Hover ---------------------- */
 .left-type-box:hover .checkmark {
-  background: #5594b0;
+  background: #8EC299;
 }
 
 .left-type-box:hover .checkmark p {
@@ -569,7 +575,7 @@ section {
 
 /* ---------------------- Click ---------------------- */
 .left-type-box input[type="checkbox"]:checked~.checkmark {
-  background-color: #0276AB;
+  background-color: #8EC299;
 
   transition: ease background-color 300ms;
 }
@@ -1078,24 +1084,25 @@ section-2 .box-text .box-special {
 
   color: #000000;
 }
+
 /*----------ANIMATION---------------*/
-.img-item .box-img
-{
+.img-item .box-img {
   overflow: hidden;
 }
-.img-item .box-img img 
-{
+
+.img-item .box-img img {
   max-width: 100%;
   transition: all 0.5s;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
-.img-item .box-img:hover img
-{
+
+.img-item .box-img:hover img {
 
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
+
 /*-------FOOTER----*/
 footer {
   height: 100px;
