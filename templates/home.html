@@ -16,7 +16,8 @@
     <header>
         <div class="box">
             <div class="box-logo">
-                <a href="{{url_for('landing')}}"><img src="{{ url_for('static', filename='IMG/IMG-HOME/logo-fix.png') }}" alt="logo"></a>
+                <a href="{{url_for('landing')}}"><img
+                        src="{{ url_for('static', filename='IMG/IMG-HOME/logo-fix.png') }}" alt="logo"></a>
             </div>
             <div class="box-page">
                 <div class="page-home">
@@ -31,7 +32,7 @@
             </div>
         </div>
     </header>
-   
+
     <!-------------BODY--------------->
     <div class="big-space"></div>
     <div class="line"></div>
@@ -133,10 +134,18 @@
                             </span>
                         </label>
                     </form>
-                    <form class="find">
-                        <i class="fa-solid fa-arrow-right"></i>
-                        Find Recipes
-                    </form>
+                    <button>
+                        <div class="svg-wrapper-1">
+                            <div class="svg-wrapper">
+                                <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 12L8.6 10.55L12.15 7H0V5H12.15L8.6 1.45L10 0L16 6L10 12Z"
+                                        fill="#0F5152" />
+                                </svg>
+                            </div>
+                        </div>
+                        <span>Find Recipes</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -146,11 +155,11 @@
         const btn_open = document.getElementById('btn-open');
         const btn_close = document.getElementById('btn-close');
         const bg = document.getElementById('bg');
-        btn_open.addEventListener('click',()=>{
+        btn_open.addEventListener('click', () => {
             //SHOW
             bg.classList.add('show');
         });
-        btn_close.addEventListener('click',()=>{
+        btn_close.addEventListener('click', () => {
             //HIDE
             bg.classList.remove('show');
         });  
@@ -267,7 +276,7 @@
                 <div class="box-line2"> </div>
             </div>
         </div>
-        
+
         <!-----------------SECTION 4------------------>
         <div class="section-4">
             <div class="head-tile">
@@ -294,7 +303,8 @@
                 <div class="box-product">
                     <div class="img-item">
                         <div class="box-img">
-                            <img src="{{ url_for('static', filename='/IMG/IMG-HOME/section-4-product-1.jpeg') }}" alt="food">
+                            <img src="{{ url_for('static', filename='/IMG/IMG-HOME/section-4-product-1.jpeg') }}"
+                                alt="food">
                         </div>
                         <div class="box-text">
                             <div class="head-tile">
@@ -308,7 +318,8 @@
                     </div>
                     <div class="img-item">
                         <div class="box-img">
-                            <img src="{{ url_for('static', filename='/IMG/IMG-HOME/section-4-product-2.jpeg') }}" alt="food">
+                            <img src="{{ url_for('static', filename='/IMG/IMG-HOME/section-4-product-2.jpeg') }}"
+                                alt="food">
                         </div>
                         <div class="box-text">
                             <div class="head-tile">
@@ -322,7 +333,8 @@
                     </div>
                     <div class="img-item">
                         <div class="box-img">
-                            <img src="{{ url_for('static', filename='/IMG/IMG-HOME/section-4-product-1.jpeg') }}" alt="food">
+                            <img src="{{ url_for('static', filename='/IMG/IMG-HOME/section-4-product-1.jpeg') }}"
+                                alt="food">
                         </div>
                         <div class="box-text">
                             <div class="head-tile">
@@ -427,4 +439,5 @@
         <img src="{{ url_for('static', filename='/IMG/IMG-HOME/thankyou.png') }}" alt="footer">
     </footer>
 </body>
+
 </html>
