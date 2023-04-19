@@ -19,10 +19,10 @@
 
 <body>
     <!----------------------HEADER----------------->
-    <header>
+    <header id="back">
         <form class="box">
             <label class="box-logo">
-                <a href="{{url_for('landing')}}"><img
+                <a href="{{url_for('landing')}}"><img id="im"
                         src=" {{ url_for('static', filename='IMG//IMG-SEARCH/logo.png') }}" alt="logo"></a>
             </label>
             <label class="box-page">
@@ -38,6 +38,25 @@
             </label>
         </form>
     </header>
+    <!----------------------------------SCROLL NAVBAR---------------------------->
+<script>
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("back").style.height = "60px";
+            document.getElementById("im").style.width = "80%";
+            document.getElementById("im").style.height = "80%";
+        } else {
+            document.getElementById("back").style.height = "75px";
+            document.getElementById("im").style.width = "90%";
+            document.getElementById("im").style.height = "90%";
+        }
+    }
+</script>
+<!--------------------------------------------------------------------------->
     <!-------------BODY--------------->
 
     <section>
