@@ -330,7 +330,6 @@ section {
   background: #FFFFFF;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 
 }
@@ -345,8 +344,7 @@ section {
 #container .box-1 #search {
   width: 470px;
   height: 60px;
-  left: 62px;
-  top: 80px;
+  margin-top: 40px;
 
   border: 1px solid #0F5152;
   border-radius: 30px;
@@ -370,7 +368,7 @@ section {
 
 #container .add-img {
   width: 470px;
-  height: 239px;
+  height: 300px;
   display: flex;
   justify-content: center;
   flex-direction: column;

@@ -84,38 +84,11 @@
                         </label>
                     </div>
                     <!------------------------------------------->
-                    <div class="choose-ingredient" id="chooseIn">
-                        <p>Common Ingredients</p>
-                        <form class="list-choose">
-                            <label class="ctype-box">
-                                <input type="checkbox" name="" id="">
-                                <span class="checkmark">
-                                    <div></div>
-                                    <p>Lorem ipsum</p>
-                                </span>
-                            </label>
-                            <label class="ctype-box">
-                                <input type="checkbox" name="" id="">
-                                <span class="checkmark">
-                                    <div></div>
-                                    <p>Lorem ipsum</p>
-                                </span>
-                            </label>
-                            <label class="ctype-box">
-                                <input type="checkbox" name="" id="">
-                                <span class="checkmark">
-                                    <div></div>
-                                    <p>Lorem ipsum</p>
-                                </span>
-                            </label>
-                        </form>
-                    </div>
                 </div>
                  <!---------------------------SCRIP IMG---------->
                  <script>
                     const addImage = document.getElementById("addImage");
                     const search = document.getElementById("search")
-                    const chooseIn = document.getElementById("chooseIn");
                     const upload = document.getElementById("custom-btn");
                     const textt = document.getElementById("textt");
                     const inpFile = document.getElementById("inpFile");
@@ -130,7 +103,6 @@
                             textt.style.display="none";
                             previewContainer.style.display="block";
                             previewImage.style.display="block";
-                            chooseIn.style.display="none";
                             search.style.display="none";
                             addImage.style.height="500px"
                             reader.addEventListener("load",function(){

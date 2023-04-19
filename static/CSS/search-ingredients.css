@@ -323,7 +323,6 @@ section div .food:hover{
   align-items: center;
 
 }
-
 #container .box-2 {
   width: 400px;
   height: 440px;
@@ -334,9 +333,6 @@ section div .food:hover{
 #container .box-1 #search {
   width: 470px;
   height: 60px;
-  left: 62px;
-  top: 80px;
-
   border: 1px solid #0F5152;
   border-radius: 30px;
   outline: none;
@@ -359,7 +355,7 @@ section div .food:hover{
 
 #container .add-img {
   width: 470px;
-  height: 239px;
+  height: 300px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -400,7 +396,6 @@ section div .food:hover{
   font-size: 20px;
   line-height: 29px;
   text-align: center;
-
   color: #0F5152;
 }
 
