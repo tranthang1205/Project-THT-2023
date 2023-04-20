@@ -12,10 +12,10 @@
 
 <body>
     <!----------------------HEADER----------------->
-    <header>
+    <header id="back">
         <div class="box">
             <div class="box-logo">
-                <a href="{{url_for('landing')}}"><img src="{{ url_for('static', filename='IMG/IMG-HOME/logo-fix.png') }}" alt="logo"></a>
+                <a href="{{url_for('landing')}}"><img id="im" src="{{ url_for('static', filename='IMG/IMG-HOME/logo-fix.png') }}" alt="logo"></a>
             </div>
             <div class="box-page">
                 <div class="page-home">
@@ -30,6 +30,25 @@
             </div>
         </div>
     </header>
+    <!----------------------------------SCROLL NAVBAR---------------------------->
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                document.getElementById("back").style.height = "60px";
+                document.getElementById("im").style.width = "80%";
+                document.getElementById("im").style.height = "80%";
+            } else {
+                document.getElementById("back").style.height = "75px";
+                document.getElementById("im").style.width = "90%";
+                document.getElementById("im").style.height = "90%";
+            }
+        }
+    </script>
+    <!--------------------------------------------------------------------------->
     <!-------------BODY--------------->
     <section>
         <div class="main">
@@ -143,10 +162,10 @@
         <div class="member">
             <div class="item">
                 <div class="box-avt">
-                    <img src="{{ url_for('static', filename='/IMG/IMG-HOME/CLONE.jpeg') }}" alt="avt">
+                    <img src="{{url_for('static',filename='IMG/vuong.jpg')}}" alt="avt">
                 </div>
                 <div class="info">
-                    <p>Valleny</p>
+                    <p>Vuong</p>
                 </div>
                 <div class="inf-mini">
                     <p>Designer</p>
@@ -154,10 +173,10 @@
             </div>
             <div class="item">
                 <div class="box-avt">
-                    <img src="{{ url_for('static', filename='/IMG/IMG-HOME/CLONE.jpeg') }}" alt="avt">
+                    <img src="{{url_for('static',filename='IMG/Toan.jpg')}}" alt="avt">
                 </div>
                 <div class="info">
-                    <p>Orias</p>
+                    <p>Toan</p>
                 </div>
                 <div class="inf-mini">
                     <p>Front-end</p>
@@ -165,10 +184,10 @@
             </div>
             <div class="item">
                 <div class="box-avt">
-                    <img src="{{ url_for('static', filename='/IMG/IMG-HOME/CLONE.jpeg') }}" alt="avt">
+                    <img src="{{url_for('static',filename='IMG/thang.jpg')}}" alt="avt">
                 </div>
                 <div class="info">
-                    <p>Maru</p>
+                    <p>Thang</p>
                 </div>
                 <div class="inf-mini">
                     <p>Back-end</p>
