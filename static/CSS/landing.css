@@ -432,13 +432,16 @@ body{
     object-fit: cover;
 }
 .avt1{
-    background-image: url(/static/IMG/discord.png);
+    background-image: url(/static/IMG/vuong.jpg);
+    background-size: cover;
 }
 .avt2{
-    background-image: url(/static/IMG/discord.png);
+    background-image: url(/static/IMG/Toan.jpg);
+    background-size: cover;
 }
 .avt3{
-    background-image: url(/static/IMG/discord.png);
+    background-image: url(/static/IMG/thang.jpg);
+    background-size: cover;
 }
 
 /* LANDING 9 */

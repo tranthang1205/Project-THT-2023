@@ -210,6 +210,7 @@ section {
 }
 
 .search {
+  cursor: pointer;
   position: relative;
 }
 
@@ -946,11 +947,12 @@ section-2 .box-text .box-special {
 
 }
 
-.section-4 .mini-box .box-img {
+.section-4 .mini-box .box-img .img{
   width: 100%;
   height: 580px;
-}
+  overflow: hidden;
 
+}
 .section-4 .img {
   width: 100%;
   height: 445px;
